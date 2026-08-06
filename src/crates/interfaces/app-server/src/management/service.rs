@@ -407,7 +407,7 @@ fn model_summary(model: &bitfun_core::service::config::AIModelConfig) -> ModelSu
         custom_request_body_configured: model.custom_request_body.is_some(),
         auth_source: Some(match model.auth {
             bitfun_core::service::config::AuthConfig::ApiKey => "api_key".to_string(),
-            bitfun_core::service::config::AuthConfig::Subscription { provider } => {
+            bitfun_core::service::config::AuthConfig::Subscription { provider, .. } => {
                 format!("subscription:{provider:?}").to_ascii_lowercase()
             }
         }),
