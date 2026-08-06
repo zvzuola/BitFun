@@ -221,6 +221,7 @@ mod tests {
             EXTERNAL_SOURCES_CAPABILITY,
             crate::management::ACCOUNT_CAPABILITY,
             crate::management::SETTINGS_SYNC_CAPABILITY,
+            crate::management::WORKTREES_CAPABILITY,
         ] {
             let capability = capabilities
                 .iter()
